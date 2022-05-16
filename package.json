@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/turbo-rails": "^7.1.1",
+    "autoprefixer": "^10.4.7",
+    "esbuild": "^0.14.38",
+    "esbuild-rails": "^1.0.3",
+    "jquery": "^3.6.0",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0",
+    "postcss-nesting": "^10.1.4"
+  },
+  "scripts": {
+    "build": "node esbuild.config.js esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
+    "build:css": "postcss ./app/assets/stylesheets/application.postcss.css -o ./app/assets/builds/application.css"
+  }
+}
