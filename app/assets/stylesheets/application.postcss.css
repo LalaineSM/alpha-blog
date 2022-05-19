@@ -1,1 +1,3 @@
 /* Entry point for your PostCSS build */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'style_sheet.css';
