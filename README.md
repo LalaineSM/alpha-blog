@@ -5,4 +5,7 @@ First Test repo on the Complete Ruby on Rails Developer
 - yarn build:css --watch
 - yarn build --watch
 - rails s
-.
+
+- git add.
+- git commit -am "eme"
+- git push
