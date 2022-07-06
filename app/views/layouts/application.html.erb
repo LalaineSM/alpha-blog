@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AlphaBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +9,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
+    <% flash.each do |name, msg| %>
+    <%= msg %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
