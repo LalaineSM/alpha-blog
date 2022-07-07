@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(:id)
   end
 
   def new
@@ -17,7 +17,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
   def create
     @article = Article.new(params.require(:article).permit(:title, :description))
     if @article.save
@@ -28,7 +27,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-
   def update
     @article = Article.find(params[:id])
     if @article.update(params.require(:article).permit(:title, :description))
@@ -37,6 +35,13 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path
+
   end
 
 end

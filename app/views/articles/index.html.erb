@@ -14,8 +14,19 @@
       <tr>
         <td><%=article.title %></td>
         <td><%=article.description %></td>
-        <td>Some Actions</td>
+        <td><%= button_to 'Show', article_path(article), method: :get %></td>
+        <td><%= button_to 'Edit', edit_article_path(article), method: :get %></td>
+        <td><%= button_to 'Delete', article_path(article), method: :delete %></td>
       </tr>
+
     <% end %>
+      <tfoot>
+        <tr>
+          <td><%= button_to 'Create New Article', new_article_path(), method: :get %></td>
+        </tr>
+      </tfoot>
   </tbody>
+
+
 </table>
+
