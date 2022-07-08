@@ -1,11 +1,11 @@
 <h1>Articles listing page </h1>
 
-<table> 
+<table > 
   <thead>
-    <tr>
+    <tr >
       <th>Title</th>
       <th>Description</th>
-      <th>Actions</th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -14,19 +14,22 @@
       <tr>
         <td><%=article.title %></td>
         <td><%=article.description %></td>
-        <td><%= button_to 'Show', article_path(article), method: :get %></td>
-        <td><%= button_to 'Edit', edit_article_path(article), method: :get %></td>
-        <td><%= button_to 'Delete', article_path(article), method: :delete %></td>
+        <td><%= link_to 'Show', article_path(article), method: :get %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), method: :get %></td>
+        <td><%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"} %></td>
       </tr>
 
     <% end %>
       <tfoot>
         <tr>
-          <td><%= button_to 'Create New Article', new_article_path(), method: :get %></td>
         </tr>
       </tfoot>
   </tbody>
-
-
 </table>
 
+<p>
+<button><%= link_to 'Create New Article', new_article_path(), method: :get %>
+</button>
+<button><%= link_to 'Home Page', root_path %></button> 
+<button><%= link_to 'About Page', about_path %></button>
+</p>

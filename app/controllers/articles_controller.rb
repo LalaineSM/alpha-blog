@@ -1,7 +1,15 @@
 class ArticlesController < ApplicationController
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.where(id: params[:id])
+  
+    if not @article.present?
+      redirect_to articles_path 
+    else
+      @article = @article.first
+    end
+
+
   end
 
   def index
@@ -41,7 +49,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @article.destroy
     redirect_to articles_path
-
   end
 
 end

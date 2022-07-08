@@ -9,7 +9,7 @@
   <% end %>
   </ul>
   
-<% end %>
+<% end %> 
 
 <%= form_with scope: :article, url: articles_path, local: true, data:{turbo: false} do |f| %>
 
@@ -26,5 +26,7 @@
   <p>
     <%= f.submit %>
   </p>
-  
+
   <% end %>
+
+ <button><%= link_to 'Return to Home', articles_path %></button>

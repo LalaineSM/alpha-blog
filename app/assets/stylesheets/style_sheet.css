@@ -2,33 +2,40 @@
   color: orangered;
 }
 
+th {
+  font-size: 25px; 
+}
 html {
   font-size: 16px; 
-  font-family: "Open Sans", sans-serif;
+  font-family: "Arial";
 }
 
 h1 {
-  font-size:  60px;
-  margin: 0;
+  font-size:  40px;
+  margin: auto;
   padding: 20px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+  color: black;
+  text-shadow: 1.5px 1px 1px darkslateblue;
 }
 
-html {
-  background-color: #FFCCFF;
-}
 
 body {
-  width: 600px;
-  margin: 100px auto auto auto ;
-  background-color: #9BDFF7;
+  width: 650px;
+
+  background-color: white ;
   padding: 0 20px 20px 20px;
-  border: 5px solid black;
+  border: 0px solid black;
 
 }
 
 img {
   display: block;
   margin: 0 auto;
+}
+
+button {
+  background-color: #A9DFBF;
+  font-size:  20px;
+  border: 3px solid green;
+
 }

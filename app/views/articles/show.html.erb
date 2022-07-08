@@ -2,3 +2,8 @@
 
 <p><strong>Title:</strong><%= @article.title %></p>
 <p><strong>Description: </strong><%= @article.description%></p>
+<p><button><%= link_to 'Edit', edit_article_path(@article)%></button> | 
+<button><%= link_to 'Delete', article_path(@article),  data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}  %></button> |
+<button><%= link_to 'Return to Home', articles_path %></button>
+</p>
+
