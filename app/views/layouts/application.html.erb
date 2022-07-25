@@ -4,12 +4,13 @@
     <title>AlphaBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-  <body>
+  <body class="d-flex flex-column">
+    <%= render partial: 'layouts/partials/navbar', locals: {} %>
     <%= render 'layouts/messages' %>
     <%= yield %>
+    <%= render 'layouts/partials/footer' %>
   </body>
 </html>

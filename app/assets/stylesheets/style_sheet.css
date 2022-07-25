@@ -10,7 +10,7 @@ html {
   font-family: "Arial";
 }
 
-h1 {
+h1 {*/
   font-size:  40px;
   margin: auto;
   padding: 20px 0;
@@ -20,12 +20,8 @@ h1 {
 
 
 body {
-  width: 650px;
-
   background-color: white ;
-  padding: 0 20px 20px 20px;
   border: 0px solid black;
-
 }
 
 img {
@@ -33,9 +29,82 @@ img {
   margin: 0 auto;
 }
 
-button {
-  background-color: #A9DFBF;
-  font-size:  20px;
-  border: 3px solid green;
+.navbar {
+  background-color: pink !important;
+}
 
+.nav-link {
+  color: black !important;
+}
+
+#logo {
+  float:  left;
+  font-size:  1.7em;
+  color:  #fff;
+  text-transform:  uppercase;
+  letter-spacing:  -1px;
+  font-weight:  bold;
+}
+
+#home-container {
+  margin:  2rem 5rem 6rem 5rem;
+  padding: 1rem 2rem 0rem 2rem;
+  background-image: url("home_picture.jpg");
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-size: cover;
+  height: 22.5rem;
+}
+
+.btn-outline-success {
+  color: white;
+  background-color: #AD5413;
+  border-color: white;
+}
+/*
+.btn-primary {
+  color: white;
+  background-color: #4A9F1A;
+  border-color: white;
+}
+*/
+html,
+body {
+  height: 100%;
+  background-color: white;
+}
+
+
+
+#sticky-footer {
+  position: fixed;
+  bottom: 0rem;
+  width: 100%;
+  background-color: #F8BDD5;
+}
+
+.flex {
+  display: flex;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+/*.alert-danger {
+  border: .2rem solid red
+}
+
+.alert-success {
+  border: .2rem solid green
+}*/
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
 }
