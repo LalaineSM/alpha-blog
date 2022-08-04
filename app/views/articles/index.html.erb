@@ -10,7 +10,8 @@
           </div>
           <div class="card-body">
             <h5 class="card-title"><%=article.title %></h5>
-            <p class="card-text"><%=article.description %></p>
+            <pre>
+              <p class="card-text"><%=article.description %></p></pre>
             <a>
               <div style="display: inline-flex">
                 <%= button_to 'View', article_path(article), method: :get, class: "btn btn-outline-success", style:"margin-left: 0.5rem" %>
