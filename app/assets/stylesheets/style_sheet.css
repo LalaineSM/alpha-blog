@@ -67,6 +67,8 @@ img {
   background-color: #4A9F1A;
   border-color: white;
 }
+
+
 */
 html,
 body {
@@ -111,4 +113,10 @@ body {
 
 .card-text {
   text-align: left;
+}
+
+{
+  display: block;
+  float: left;
+  width : 120px;    
 }

@@ -9,8 +9,8 @@
         <div class="card-text"><%= simple_format(@article.description)%></div>
         <a>
           <div style="display: inline-flex">
-            <%= button_to 'Edit', edit_article_path(@article), method: :get, class: "btn btn-outline-info", style:"margin-left: 0.5rem" %>
-            <%= button_to 'Delete', article_path(@article), data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}, class: "btn btn-outline-danger", style:"margin-left: 0.5rem" %>
+            <%= link_to 'Edit', edit_article_path(@article), method: :get, class: "btn btn-outline-info", style:"margin-left: 0.5rem" %>
+            <%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}, class: "btn btn-outline-danger", style:"margin-left: 0.5rem" %>
           </div>
         </a>
       </div>
